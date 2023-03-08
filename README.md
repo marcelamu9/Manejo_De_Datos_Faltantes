@@ -1,14 +1,17 @@
 # Manejo de Datos Faltantes: Detección y Exploración
 
-##Índice
+## Índice
 
 * [Descripción del proyecto](#descripción-del-proyecto)
-1. [Identificación de valores faltantes](#identificación-de-valores-faltantes)
-* [2. Unificar el formato de los valores faltantes](#Unificar-el-formato-de-valores-faltantes)
-* [2.1. Valores faltantes explicitos](#Valores-faltantes-explicitos)
-* [2.1. Valores faltantes implicitos](#Valores-faltantes-explicitos)
-* [3. Detección y manipulación de valores faltantes](#Detección-y-manipulación-de-valores-faltantes)
-* [4. Búsqueda de relaciones de valores faltantes](#Busqueda-de-relaciones-de-valores-faltantes)
+* [1. Identificación de valores faltantes](#1-identificación-de-valores-faltantes)
+* [2. Unificar el formato de los valores faltantes](#2-reemplazar-los-valores-faltantes-para-trabajar-todo-estos-con-el-mismo-formato)
+* [2.1. Valores faltantes explicitos](#21-los-valores-faltantes-explicitos-son-aquellos-en-los-que-se-puede-identificar-de-forma-directa-por-ejemplo-esta-el-valor-en-na--o-expresado-de-alguna-manera-en-la-variable)
+* [2.1. Valores faltantes implicitos](#22-los-valores-faltantes-implicitos-se-refiere-a-todo-aquello-que-se-entiende-que-está-incluido)
+* [3. Detección y manipulación de valores faltantes](#3-detección-y-manipulación-de-valores-faltantes)
+* [4. Búsqueda de relaciones de valores faltantes](#4-busqueda-de-relaciones-de-valores-faltantes)
+* [5. ELiminació de valores faltantes](#5-eliminación-de-valores-faltantes)
+* [6. Tratamiento de valores faltantes](#6-tratamiento-de-valores-faltantes)
+
 
 # Descripción del proyecto 
 A los largo de este archivo describe un paso a paso de como detectar y abordar los valores faltantes o también llamados outliers, basado en el curo de Platzi Curso de Manejo de Datos Flatantes: Detección y Exploración ditacto por el profesor Jesús Velez.
@@ -24,17 +27,13 @@ Por este motivo es conveniente identificar de que formas pueden aparecer nuestro
 Despues de identificar la forma en la que parecen estos valores faltantes es posible reemplazar estos por el formato que se crea mas conveniente, por ejemplo ```np.nan``` o ```"NA"```
 
 Tambien debe considerarse que existen dos formas en las que podemos tener valores faltantes:
-1. **Los valores faltantes explicitos**, son aquellos en los que se puede identificar de forma directa, por ejemplo, esta el valor en NA, "", o expresado de alguna manera en la variable.
-2. **Los valores faltantes implicitos**, se refiere a todo aquello que se entiende que está incluido
+### 2.1. **Los valores faltantes explicitos**, son aquellos en los que se puede identificar de forma directa, por ejemplo, esta el valor en NA, "", o expresado de alguna manera en la variable.
+### 2.2. **Los valores faltantes implicitos**, se refiere a todo aquello que se entiende que está incluido
 pero sin ser expresado de forma directa o explícitamente.”
 
-     Un <code>valor faltante implícito</code> indica que el valor faltante <b>debería estar incluido</b>
-    en el conjunto de datos del análisis, <b>sin que éste lo diga</b> o lo <b>especifique</b>.
-    Por lo general, son valores que podemos encontrar al pivotar nuestros datos
-    o contabilizar el número de apariciones de combinaciones de las variables de estudio.
-    </p>
+Un valor faltante implícito indica que el valor faltante <b>debería estar incluido</b>en el conjunto de datos del análisis, <b>sin que éste lo diga</b> o lo <b>especifique</b>.Por lo general, son valores que podemos encontrar al pivotar nuestros datoso contabilizar el número de apariciones de combinaciones de las variables de estudio.</p>
 
-    Una manera de identificar los valores implicitos es pivotarlos ```  df.pivot_wider()``` y cuantificar la existencia de las n-tuplas. para este caso lo ideal es exponer las filas faltantes implicitas a explicitas, es decir, agregar estas filas de los implicitas a los datos
+Una manera de identificar los valores implicitos es pivotarlos ```df.pivot_wider()``` y cuantificar la existencia de las n-tuplas. para este caso lo ideal es exponer las filas faltantes implicitas a explicitas, es decir, agregar estas filas de los implicitas a los datos
 
 
 ## 3. Detección y manipulación de valores faltantes 
