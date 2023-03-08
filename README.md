@@ -9,7 +9,7 @@
 * [2.1. Valores faltantes implicitos](#22-los-valores-faltantes-implicitos-se-refiere-a-todo-aquello-que-se-entiende-que-está-incluido)
 * [3. Detección y manipulación de valores faltantes](#3-detección-y-manipulación-de-valores-faltantes)
 * [4. Búsqueda de relaciones de valores faltantes](#4-busqueda-de-relaciones-de-valores-faltantes)
-* [5. ELiminació de valores faltantes](#5-eliminación-de-valores-faltantes)
+* [5. ELiminación de valores faltantes](#5-eliminación-de-valores-faltantes)
 * [6. Tratamiento de valores faltantes](#6-tratamiento-de-valores-faltantes)
 
 
